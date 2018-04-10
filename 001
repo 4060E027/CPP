@@ -1,1 +1,34 @@
+#include <iostream>
+using namespace std;
 
+int main(){
+	
+    const int A = 5;
+    double num[A];
+    double numb[A];
+    double sum = 0;
+
+    for (int i = 0; i < A; i++)
+    {
+        cout << "Enter a new number : ";
+        cin >> num[i];
+        sum += num[i];
+        numb[i] = num[i] * num[i];
+    }
+    
+    cout << "The num[1] is : " << num[1] << endl;
+    cout << "The numb[1] is : " << numb[1] << endl;
+
+    double an = sum / A;
+
+    int count = 0;
+    for (int i = 0; i < A; i++)
+      if (num[i] > an)
+        count++;
+
+    cout << "Average is " << an << endl;
+    cout << "Number of elements above the average " << count << endl;
+
+    system("pause");
+    return 0;
+}
