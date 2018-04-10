@@ -1,8 +1,6 @@
 #include <iostream>
 using namespace std;
-
 int main(){
-	
     const int A = 5;
     double num[A];
     double numb[A];
@@ -28,6 +26,7 @@ int main(){
 
     cout << "Average is " << an << endl;
     cout << "Number of elements above the average " << count << endl;
+    cout << "Xiaohui is going to give a big job to the teacher" << endl; 
 
     system("pause");
     return 0;
