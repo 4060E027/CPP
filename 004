@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main(void){
+    int i ;
+    char A[12] = {'H','E','L','L','O',' ','W','O','R','L','D'};
+    
+    for ( i = 0 ; i < 12 ; i++ ) {
+    	cout << A[i] << endl;
+	}
+
+    system("pause");
+    return 0;
+}
