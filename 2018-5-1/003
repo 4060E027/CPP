@@ -1,0 +1,13 @@
+double cir::get()
+{
+	return r * r * 3.14159 ;
+}
+
+
+將上述改為下述
+
+
+double cir::get()
+{
+	return r * r * r * 3.14159 * 4/3 ;
+}
