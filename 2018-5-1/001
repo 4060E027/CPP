@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    string city;
+    cout << "Enter a city: ";
+    cin >> city;
+    cout << "You entered " << city << endl;
+
+  return 0;
+}
+
+
