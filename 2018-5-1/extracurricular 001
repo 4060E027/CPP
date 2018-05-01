@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int i=0,j=0;
+	printf("Please enter a value : ");
+	scanf("%d",&i);
+	SSD:
+		if (j<i){
+			j++;
+			printf(" %d\n",j);
+			goto SSD;
+		}else{
+			goto exit;
+		}
+	exit:
+
+  return 0;
+}
