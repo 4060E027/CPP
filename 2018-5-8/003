@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+void ShowMessage()
+{
+	cout << "安安偉大的恩師，我是學生蔡昱輝，學號是4060E027。" << endl;
+}
+void ShowAge()
+{
+	int iAge=19;
+	cout << "年齡是 : " << iAge << endl;
+}
+void ShowIndex()
+{
+	int iIndex=1;
+	cout << "目前大 : " << iIndex << endl;
+}
+int main()
+{
+	ShowMessage();
+	ShowAge();
+	ShowIndex();
+	
+	return 0;
+}
