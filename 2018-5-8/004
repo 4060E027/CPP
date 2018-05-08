@@ -1,0 +1,17 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main()
+{
+	ofstream o1;
+	o1.open("001.txt");
+	
+	o1 << "jack" << " " << "Y" << " " << "Choco" << " " << 19 << endl;
+	o1 << "cornnie" << " " << "U" << " " << "Milk" << " " << 23 << endl;
+	
+	o1.close();
+	
+	cout << "Done" << endl;
+	
+	return 0;
+}
