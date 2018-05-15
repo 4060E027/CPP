@@ -1,1 +1,38 @@
-0.0
+#include <iostream> 
+#include <string> 
+using namespace std; 
+
+int main() { 
+    string str1; 
+    string str2("caterpillar"); 
+    string str3(str2); 
+
+    str1 = str1.assign(str2, 0, 5); 
+    cout << "str1 : " << str1 << endl; 
+    str1 = str1.assign("caterpillar", 5, 6); 
+    cout << "str1 : " << str1 << endl; 
+
+    str1 = ""; 
+
+    str1 = str1.append(str2, 0, 5); 
+    str1 = str1.append(str3, 5, 6); 
+    cout << "str1 : " << str1 << endl; 
+
+    cout << "尋找str1中的第一個pill : " 
+         << str1.find("pill", 0) << endl; 
+
+    cout << "在str1插入字串*** : " 
+         << str1.insert(5, "***") << endl; 
+
+    cout << "str1長度 : " << str1.length() << endl; 
+ 
+    return 0; 
+}
+
+
+方 法	說 明
+assign(string, start, num)  | 從string的第start個字元取出num個字元來指定給另一字串物件。
+append(string, start, num)  | 從string的第start個字元取出num個字元來附加至另一字串物件之後。
+find(string, 0)             | 從引發find的字串物件第0個字元尋找是否有符合string的子字串。
+insert(start, string)       | 將string插入引發insert的字串物件第start個字元之後。
+length()                    | 傳回字串的長度。
