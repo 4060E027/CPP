@@ -1,3 +1,5 @@
+== TestGenericStack.cpp ==
+
 #include <iostream>
 #include <string>
 #include "GenericStack.h"
@@ -26,3 +28,62 @@ int main()
 
   return 0;
 }
+
+== GenericStack.h ==
+
+#ifndef STACK_H
+#define STACK_H
+
+template<typename T>
+class Stack
+{
+public:                   //公開的方法：可以被存取
+  Stack();                //建構子
+  bool empty() const;     //判斷是否為空的函數
+  T peek() const;         //取出最上面元數的函數
+  void push(T value);     //把資料放入的函數
+  T pop();                //取出最上面資料的函數
+  int getSize() const;    //取得堆疊大小的函數
+
+private:                  //將資料庫影藏
+  T elements[100];        //大小為100
+  int size;               //設一個值
+};
+
+template<typename T>
+Stack<T>::Stack()
+{
+  size = 0;
+}
+
+template<typename T>
+bool Stack<T>::empty() const
+{
+  return (size == 0);
+}
+
+template<typename T>
+T Stack<T>::peek() const
+{
+  return elements[size - 1];
+}
+
+template<typename T>
+void Stack<T>::push(T value)
+{
+  elements[size++] = value;
+}
+
+template<typename T>
+T Stack<T>::pop()
+{
+  return elements[--size];
+}
+
+template<typename T>
+int Stack<T>::getSize() const
+{
+  return size;
+}
+
+#endif
