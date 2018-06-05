@@ -1,0 +1,21 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+ 
+int main(){
+    char filename[]="d:///scores.csv";
+    fstream fp;
+    char line[128];
+    fp.open(filename, ios::in);//開啟檔案
+    if(!fp){//如果開啟檔案失敗，fp為0；成功，fp為非0
+        cout<<"Fail to open file: "<<filename<<endl;
+    }
+    cout<<"File Descriptor: "<<fp<<endl;
+    while(fp.getline(line, sizeof(line), '\n')){
+        cout<<line<<endl;
+    }
+ 
+    fp.close();//關閉檔案
+    system("pause");
+    return 0;
+}
