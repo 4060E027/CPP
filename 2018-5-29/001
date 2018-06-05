@@ -51,39 +51,39 @@ private:                  //將資料庫影藏
 };
 
 template<typename T>
-Stack<T>::Stack()
+Stack<T>::Stack()              //建構值
 {
-  size = 0;
+  size = 0;                    //大小等於零
+}
+
+template<typename T>      
+bool Stack<T>::empty() const   //判斷isEmpty函數
+{
+  return (size == 0);          //大小等於零回傳true否則回傳false
 }
 
 template<typename T>
-bool Stack<T>::empty() const
+T Stack<T>::peek() const       //peek函數
 {
-  return (size == 0);
+  return elements[size - 1];   //回傳最上面一位的值
 }
 
 template<typename T>
-T Stack<T>::peek() const
+void Stack<T>::push(T value)   //push函數
 {
-  return elements[size - 1];
+  elements[size++] = value;    //將一個值放進資料庫
 }
 
 template<typename T>
-void Stack<T>::push(T value)
+T Stack<T>::pop()              //pop函數
 {
-  elements[size++] = value;
+  return elements[--size];     //將最上面的值取出
 }
 
 template<typename T>
-T Stack<T>::pop()
+int Stack<T>::getSize() const  //getSize函數
 {
-  return elements[--size];
-}
-
-template<typename T>
-int Stack<T>::getSize() const
-{
-  return size;
+  return size;                 //會傳目前的大小值
 }
 
 #endif
